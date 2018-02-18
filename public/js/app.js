@@ -55,7 +55,7 @@ $(document).ready(() => {
 	$('#search').click(e => {
 		e.preventDefault();
 		let search = $('#searchBy').val() || '';
-		search = search.replace(' ', '-');
+		search = search.replace(/ /g, '-');
 		let sortByIndex = $('#sortBy')[0].selectedIndex;
 		let sortBy = 'id', asc = 'desc';
 		if (sortByIndex) {
@@ -95,6 +95,6 @@ $(document).ready(() => {
 		if (!subUrl[0] || !subUrl[1]) return;
 		$('#sortBy option[sortBy="' + subUrl[0] + '"][asc="' + subUrl[1] + '"]').prop('selected', true);
 		if (subUrl[2])
-			$('#searchBy').val(decodeURIComponent(subUrl[2].replace('-', ' ')));
+			$('#searchBy').val(decodeURIComponent(subUrl[2].replace(/-/g, ' ')));
 	}
 });

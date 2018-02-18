@@ -30,7 +30,8 @@ class App {
 	 */
 	private function _getUrl() {
 		if (isset($_GET['url'])) {
-			$url = filter_var(trim($_GET['url'], '/'), FILTER_SANITIZE_URL);
+			// $url = filter_var(trim($_GET['url'], '/'), FILTER_SANITIZE_URL);
+			$url = trim($_GET['url'], '/');
 			$this->_url = explode('/', $url);
 		}
 	}

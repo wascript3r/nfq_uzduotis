@@ -2,6 +2,7 @@
 <head>
 	<title><?= $title ?></title>
 	<link rel="stylesheet" type="text/css" href="<?= URL ?>public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>public/css/slick.css">
 	<link rel="stylesheet" type="text/css" href="<?= URL ?>public/sweetalert/dist/sweetalert.css">
 </head>
 

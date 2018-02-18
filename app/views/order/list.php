@@ -1,4 +1,8 @@
 <div class="login-page">
+    <center>
+        <button type="button" id="uzsakymo_forma2">Užsakymo forma</button>
+        <button type="button" id="atsijungti">Atsijungti</button>
+    </center>
     <div class="form orderlist">
         <center>
             <input type="text" id="searchBy" placeholder="Paieškos laukelis" autocomplete="off" autofocus>

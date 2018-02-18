@@ -9,6 +9,32 @@ $(document).ready(() => {
 		});
 	});
 
+	$('#slider').slick({
+		prevArrow: '#prevSlide',
+		nextArrow: '#nextSlide'
+	});
+	$('#slider img').fadeIn(500);
+
+	$('#apie').click(() => {
+		$('html, body').animate({
+			scrollTop: $('.order:eq(0)').offset().top
+		}, 500);
+	});
+	$('#galerija').click(() => {
+		$('html, body').animate({
+			scrollTop: $('.order:eq(1)').offset().top
+		}, 500);
+	});
+	$('#uzsakymo_forma').click(() => {
+		$('html, body').animate({
+			scrollTop: $('.order:eq(2)').offset().top
+		}, 500);
+	});
+	$('#prisijungimas').click(() => window.location.replace('/login'));
+	$('#namai').click(() => window.location.replace('/home'));
+	$('#uzsakymo_forma2').click(() => window.open('/home', '_blank'));
+	$('#atsijungti').click(() => window.location.replace('/logout'));
+
 	$('#login').click(function(e) {
 		e.preventDefault();
 		let form = $('.login-form').serialize();
